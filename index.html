@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Visualizer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <nav class="nav_bar">
+      <div class="algo">
+        <button>
+          <i class="fa fa-bars" style="font-size: 23px; color: white"></i>
+          Algorithms
+        </button>
+      </div>
+      <div>
+        <h1 style="font-size: 40px">Sorting Algorithm Visualizer</h1>
+      </div>
+      <div>
+        <button class="btn" id="new_values">New Values</button>
+        <button id="Sort" class="btn">Sort !</button>
+      </div>
+    </nav>
+    <div class="grid_class">
+      <div class="each_grid">
+        <p
+          style="
+            display: inline-block;
+            padding-right: 10px;
+            font-size: 20px;
+            color: white;
+          "
+        >
+          Graph Size:
+        </p>
+        <input
+          class="slider"
+          id="graph_container"
+          type="range"
+          name="int_val"
+          min="15"
+          max="150"
+          value="15"
+        />
+      </div>
+      <div class="each_grid">
+        <p
+          style="
+            display: inline-block;
+            padding-right: 10px;
+            font-size: 20px;
+            color: white;
+          "
+        >
+          Array Size:
+        </p>
+        <input
+          class="slider"
+          id="array_container"
+          type="range"
+          name="int_val"
+          min="9"
+          max="40"
+          value="15"
+        />
+      </div>
+    </div>
+    <section class="algo-topic hidden">
+      <p><i class="fa fa-angle-right"></i>&nbsp;Bubble Sort</p>
+      <p><i class="fa fa-angle-right"></i>&nbsp;Selection Sort</p>
+      <p><i class="fa fa-angle-right"></i>&nbsp;Insertion Sort</p>
+      <p><i class="fa fa-angle-right"></i>&nbsp;Quick Sort</p>
+    </section>
+    <section>
+      <div class="pointer hidden">&#8593;</div>
+      <div class="algorithm hidden"></div>
+      <div class="overlay hidden"></div>
+    </section>
+    <section class="gr_nd_arr hidden">
+      <div class="graph">
+        <div class="bars"></div>
+      </div>
+      <div class="array"></div>
+    </section>
+    <section>
+      <div class="see">
+        <a href="#" class="btn">View Code Snippet</a>
+      </div>
+    </section>
+    <script type="module" src="./front-end.js"></script>
+    <script
+      type="module"
+      src="./Algorithms/Algorithms_for_frontend/QuickSort.js"
+    ></script>
+  </body>
+</html>
